@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bg-image {
+  background: url("./assets/react.svg");
+}
+.cus-h {
+  height: 34rem;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 10px;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ffdf00;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+/* .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #100f0f;
+} */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.custom-scrollbar {
+  scrollbar-width: 2px;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-radius {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.text-cust-font {
+  font-size: 12px;
+}
+
+@media (min-width: 1024px) {
+  .md\:custom-radius {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+.c-container {
+  height: 12rem;
+  background-color: rgb(225, 225, 225);
+}
+.c-cont::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  border: 1px solid orange;
+}
+.c-cont::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 20%;
+  margin: auto;
+  top: 50px;
+
+  border-radius: 50%;  
+
+  border: 1px solid orange;
+  background-color: white;
+}
+/* @media (min-width: 400px) {
+  .xs\:hidden {
+    display: none;
+  }
+} */
