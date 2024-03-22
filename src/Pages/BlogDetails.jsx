@@ -23,15 +23,15 @@ const BlogDetails = () => {
         const accessToken = localStorage.getItem("access_token");
         const api = createAxiosInstance(accessToken);
         const response = await api.get(`/api/blog/getBlog/${blogid}`);
-        console.log(response);
+        // console.log(response);
         if (response.status === 200) {
           setLoading(false);
           return response.data.blog;
         } else {
-          console.log(response.data);
+          // console.log(response.data);
         }
       } catch (e) {
-        console.log(e);
+        // console.log(e);
       } finally {
         setLoading(false);
       }

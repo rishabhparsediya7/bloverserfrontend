@@ -15,10 +15,8 @@ const CustomModal = ({ state, blogId, toggleModal, setModalOpen }) => {
           window.location.reload();
         }
       } catch (e) {
-        console.log("error: ", e);
       }
     } else {
-      console.log("No blog to delete!");
     }
   };
   return (

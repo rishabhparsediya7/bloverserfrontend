@@ -58,7 +58,6 @@ const VerifyOtp = ({ length }) => {
           email: localStorage.getItem("email"),
           otp: finalOtp,
         });
-        console.log(response);
         if (response.status === 200) {
           localStorage.setItem("verified", true);
           setOtp(new Array(length).fill(""));
@@ -71,7 +70,6 @@ const VerifyOtp = ({ length }) => {
           setLoading(false);
         }
       } catch (e) {
-        console.log(e.message);
       } finally {
         setWrongOtp(true);
         setEMessage(emsg);

@@ -21,7 +21,7 @@ const EditBlog = () => {
   const handleEdit = async (e) => {
     e.preventDefault();
     if (blogId) {
-      console.log(blogId);
+      // console.log(blogId);
       setLoading(true);
       try {
         const accessToken = localStorage.getItem("access_token");
@@ -31,19 +31,19 @@ const EditBlog = () => {
           title: heading,
           description: editorHtml,
         });
-        console.log(response);
+        // console.log(response);
         if (response.status == 200) {
           navigate("/");
         } else {
           setError(response.data.message);
         }
       } catch (e) {
-        console.log("error: ", e);
+        // console.log("error: ", e);
       } finally {
         setLoading(false);
       }
     } else {
-      console.log("No blog to edit!");
+      // console.log("No blog to edit!");
     }
   };
   useEffect(() => {
@@ -63,10 +63,10 @@ const EditBlog = () => {
           setEditorHtml(tempData.description);
           setImageSrc(window.URL.createObjectURL(blob));
         } else {
-          console.log(response);
+          // console.log(response);
         }
       } catch (e) {
-        console.log(e);
+        // console.log(e);
       } finally {
         setLoading(false);
       }

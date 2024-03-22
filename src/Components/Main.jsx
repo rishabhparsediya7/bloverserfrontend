@@ -25,7 +25,6 @@ const Main = () => {
         setLoading(false);
       }
     } catch (err) {
-      console.log(err.response.status);
       if (err.response.status == 400 || err.response.status == 403)
         navigate("/signin");
     } finally {

@@ -45,7 +45,6 @@ const Form = () => {
         setState(state !== "undefined" ? state : "");
       }
     } catch (err) {
-      console.log(err);
     } finally {
     }
   };

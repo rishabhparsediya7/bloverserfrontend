@@ -44,7 +44,6 @@ const Comments = ({ blogId, title }) => {
         setCommentList(response.data.comments);
       }
     } catch (e) {
-      console.log(e);
     }
   };
   const handlePostComment = async () => {

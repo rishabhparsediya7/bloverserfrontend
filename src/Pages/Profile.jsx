@@ -17,7 +17,7 @@ const Profile = () => {
 
   const toggleModal = (id) => {
     setModalOpen(true);
-    console.log(id);
+    // console.log(id);
     setBlogId(id);
   };
   const getBlogsWithUserID = async (uuid) => {
@@ -32,7 +32,7 @@ const Profile = () => {
       }
     } catch (e) {
       setLoading(false);
-      console.log("error: ", e);
+      // console.log("error: ", e);
     } finally {
       setLoading(false);
     }
@@ -112,7 +112,7 @@ const Profile = () => {
           <div className="w-full flex flex-col sm:gap-3 items-center gap-2">
             <h1 className="text-4xl">{profileState.fullname}</h1>
             <h3 className="text-2xl">
-              {profileState.designation === undefined
+              {profileState.designation !== undefined
                 ? profileState.designation
                 : `Designation`}
             </h3>

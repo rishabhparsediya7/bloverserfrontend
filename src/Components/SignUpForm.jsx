@@ -32,8 +32,6 @@ const SignUpForm = ({ handleToggle }) => {
         email: email,
         fullname: fullname,
       });
-      console.log(email);
-      console.log(response);
       if (response.status == 200) {
         localStorage.setItem("email", response.data.email);
         localStorage.setItem("uuid", response.data.userId);
@@ -48,7 +46,6 @@ const SignUpForm = ({ handleToggle }) => {
       if (response.status === 409)
         throw new Error("The User has already been registerd! Try Login");
     } catch (error) {
-      console.log(error);
       setLoading(false);
       setErrors({
         ...errors,

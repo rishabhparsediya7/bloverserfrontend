@@ -60,7 +60,7 @@ const SigninForm = () => {
         });
       }
     } catch (e) {
-      console.log(e);
+      // console.log(e);
       setErrors({
         ...errors,
         message: e.response.data.message,
@@ -85,7 +85,9 @@ const SigninForm = () => {
                 <p className="text-black text-sm font-semibold rounded-md p-0.5 text-center">
                   {errors.message} with this email account.
                 </p>
-                <Link className="font-bold text-base m-auto" to="/signup">Signup</Link>
+                <Link className="font-bold text-base m-auto" to="/signup">
+                  Signup
+                </Link>
               </div>
             )}
             <form className="space-y-6" onSubmit={(e) => handleForm(e)}>
