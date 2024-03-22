@@ -10,6 +10,7 @@ import UpdatePassword from "./Pages/UpdatePassword";
 import SigninForm from "./Pages/SigninForm";
 import BlogDetails from "./Pages/BlogDetails";
 import ProtectedRoute from "./Pages/ProtectedRoute";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
@@ -82,6 +83,7 @@ function App() {
         />
         <Route path="/signin" element={<SigninForm />} />
         <Route path="/signup" element={<SignUpAuth />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
